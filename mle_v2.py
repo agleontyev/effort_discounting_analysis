@@ -9,7 +9,7 @@ import numpy as np
 from scipy import stats
 from scipy.optimize import minimize
 
-path = r"C:\Users\agleo\Dropbox\Anton\mock data (McG).xlsx"
+path = r"C:\mock data (McG).xlsx"
 df = pd.read_excel(path, index_col = 0)
 df['SubjID'] = 777
 data_all_subjects = df
