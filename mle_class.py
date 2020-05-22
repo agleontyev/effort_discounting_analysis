@@ -57,6 +57,10 @@ linear_discount_mle = LinearDiscountMLE(initial_params=initParams)
 
 result = linear_discount_mle.estimate_parameters(data_all_subjects)
 
+df_res = pd.DataFrame(result.values.tolist(), index=result.index)
 
-print('k=',str(result.values[0].x[0]))
-print('beta=',str(result.values[0].x[1]))
+df_res = df_res['x'] 
+df_res2 = pd.DataFrame(df_res.values.tolist(), index=df_res.index).rename(columns = {0:'k', 1:'beta'})
+
+#print('k=',str(result.values[0].x[0]))
+#print('beta=',str(result.values[0].x[1]))
